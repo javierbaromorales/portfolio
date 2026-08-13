@@ -1,0 +1,31 @@
+---
+description: Core identity for this cinematic parallax portfolio — anti-template, stack, and agent docs
+alwaysApply: true
+---
+
+# This portfolio
+
+A one-of-one personal site. Not a clone of Brittany Chiang, not a dark shadcn landing, not an Awwwards starter with the name swapped.
+
+## Stack (lock this)
+
+- Next.js 16 App Router + React 19 + TypeScript strict
+- Tailwind CSS v4 + CSS variables for a **custom** token set (not default zinc/slate shadcn theme as the identity)
+- GSAP 3.12+ + `@gsap/react` + Lenis 1.x (`lenis/react`) for scroll
+- Optional R3F only for one justified WebGL moment
+- `next/font`, `next/image`, Metadata API, JSON-LD
+- Content as typed data or MDX — statically generated
+
+Read `node_modules/next/dist/docs/` before writing Next.js APIs. Do not invent Pages Router, `getServerSideProps`, or `next/head`.
+
+## Non-negotiables
+
+- Server Components by default. `'use client'` on leaves only.
+- Distinct visual thesis before coding UI. Load `frontend-design` and `parallax-portfolio-craft`.
+- Scroll motion uses `nextjs-gsap-lenis`. Do not mix Lenis RAF with a second GSAP ticker.
+- Honour `prefers-reduced-motion`. Animate transform/opacity only.
+- No Inter/Space Grotesk/Syne as the whole brand. No acid-green-on-black default. No 01/02/03 fake indexes.
+
+## Agent files
+
+Rules = constraints. Skills = workflows. `AGENTS.md` = project facts. Use skills when the task matches their description.

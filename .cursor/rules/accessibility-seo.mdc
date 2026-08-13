@@ -1,0 +1,16 @@
+---
+description: Motion accessibility, semantic HTML, and portfolio SEO
+globs: "**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# A11y + SEO
+
+- `prefers-reduced-motion: reduce` disables Lenis easing and GSAP/WebGL; show the resting composition.
+- Keyboard: skip link, logical heading order, focusable controls, no scroll-hijack traps.
+- `button` for actions, `Link`/`a` for navigation. Icon buttons need `aria-label`.
+- Images: real `alt`. Decorative: `alt=""`.
+- Never `user-scalable=no` or `maximum-scale=1`.
+- Metadata: unique title template, description, canonical, OG image, Twitter card, `json-ld` Person + CreativeWork.
+- Semantic sections with ids for in-page nav; `scroll-margin-top` on anchors.
+- Contrast AA on text. `:focus-visible` rings. `aria-live` for async toasts.

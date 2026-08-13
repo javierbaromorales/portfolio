@@ -1,0 +1,21 @@
+---
+description: GSAP ScrollTrigger + Lenis parallax — RAF sync, cleanup, pins
+globs: "**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# GSAP + Lenis
+
+When editing animation, scroll, parallax, pin, or Lenis files, follow `nextjs-gsap-lenis` and official `gsap-*` skills.
+
+- Packages: `gsap`, `@gsap/react`, `lenis`. Never `@studio-freight/*`.
+- `gsap.registerPlugin(ScrollTrigger, useGSAP)` at module scope.
+- One RAF: `ReactLenis` with `autoRaf: false`; drive `lenis.raf` from `gsap.ticker`.
+- `useGSAP({ scope })` for every scene. Kill/revert on unmount (hook does this).
+- Parallax/scrub: `ease: 'none'`. Horizontal pin child uses `ease: 'none'`.
+- `ScrollTrigger` on the timeline, not on nested child tweens.
+- After images/fonts/route: `ScrollTrigger.refresh()`.
+- `gsap.matchMedia()` for breakpoints and `prefers-reduced-motion`.
+- Animate `x`/`y`/`scale`/`rotation`/`autoAlpha` only — never `top`/`left`/`width` on scroll.
+- No `overflow: hidden` on `body`.
+- `markers: true` never ships.

@@ -1,0 +1,19 @@
+---
+description: Core Web Vitals, bundles, and compositor-only motion
+globs: "**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# Performance
+
+Follow Vercel `react-best-practices` when writing or reviewing React/Next code.
+
+- Eliminate waterfalls: `Promise.all` independent reads; cheap sync checks before `await`.
+- Keep GSAP/Lenis/R3F out of the initial server graph. Dynamic-import below-fold scenes.
+- No barrel imports from animation or 3D barrels.
+- Animate transform/opacity only. No `transition: all`.
+- LCP: `next/image` + `priority` + `next/font`. Claim height in CSS before motion.
+- Defer analytics until after hydration.
+- Cap DPR on Canvas. Pause off-screen WebGL (`frameloop="demand"` or visibility).
+- `content-visibility` for long work lists. Do not layout-read in render.
+- Target: INP healthy, CLS ~0, LCP from a real image/font, 60fps scroll on mid-tier laptops.

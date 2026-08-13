@@ -1,0 +1,31 @@
+---
+description: Next.js App Router, RSC boundaries, metadata, and images
+globs: app/**/*.{ts,tsx}, src/app/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Next.js App Router
+
+- App Router only. Never `pages/`, `getServerSideProps`, `getStaticProps`, `next/head`.
+- `page.tsx` / `layout.tsx` stay Server Components. Await `params` and `searchParams`.
+- `cookies()`, `headers()`, `draftMode()` are async — always `await`.
+- `'use client'` only for hooks, events, or browser APIs. Push it to the smallest leaf.
+- Fetch in Server Components. Pass serializable props down. Do not fetch in client for SEO content.
+- File conventions: `loading.tsx`, `error.tsx`, `not-found.tsx` per route that needs them.
+- Metadata API in `layout.tsx` / `page.tsx` (title template, description, openGraph, twitter, canonical, JSON-LD).
+- Always `next/image` with `width`+`height` or `fill` + sized parent. `priority` on LCP. Descriptive `alt`.
+- `next/font` for all faces. No runtime Google Fonts `<link>`.
+- Dynamic-import heavy client scenes: `next/dynamic` with a real loading placeholder.
+- Direct imports. Avoid barrel files that pull GSAP/R3F into the server graph.
+
+```tsx
+// BAD
+'use client'
+export default function Page() { /* fetches + GSAP */ }
+
+// GOOD
+export default async function Page() {
+  const work = await getWork()
+  return <WorkScroll work={work} /> // client leaf
+}
+```

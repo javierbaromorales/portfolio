@@ -1,0 +1,19 @@
+---
+description: React Three Fiber production rules for a single portfolio WebGL moment
+globs: "**/*canvas*.{ts,tsx},**/*scene*.{ts,tsx},**/*gl*.{ts,tsx},**/*three*.{ts,tsx}"
+alwaysApply: false
+---
+
+# R3F / WebGL
+
+Use only if the work is spatial. One canvas, not a 3D theme. Load `r3f-best-practices`.
+
+- Never `setState` inside `useFrame`. Mutate refs. Use `delta`.
+- No per-frame allocations (`new Vector3()`). Reuse vectors.
+- Zustand selectors or `getState()` in `useFrame` — never the whole store.
+- Cap `dpr={[1, 2]}`. Compressed GLB/KTX2. Dispose geometries/materials.
+- `useGLTF.preload`. Suspense fallback. Toggle `visible`, do not remount.
+- Canvas behind DOM; pointer events only where interaction is real.
+- Skip or replace with a still on mobile / reduced motion / low GPU.
+- Do not use `OrbitControls` as the portfolio camera unless orbit is the point.
+- Sync scroll to the scene via Lenis progress or ScrollTrigger `onUpdate`, not CSS scroll on the canvas.

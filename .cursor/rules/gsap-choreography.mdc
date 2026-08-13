@@ -1,0 +1,17 @@
+---
+description: Multi-scene GSAP timeline orchestration for heroes and scripted sequences
+globs: "**/*film*,**/*demo*,**/*animation*,**/*choreograph*,**/*gsap*,**/*timeline*"
+alwaysApply: false
+---
+
+# GSAP choreography
+
+One timeline owns the sequence. Inert DOM with `data-*` attributes. GSAP lives in one `useGSAP` file.
+
+- Labels name user actions (`heroReveal`, `workPin`), not CSS properties.
+- Position with `"label+=0.12"`, never raw absolute seconds for scene coupling.
+- `autoAlpha` not `opacity`. Transforms not `top`/`left`.
+- Measure targets from DOM (`getBoundingClientRect`) — do not hardcode coordinates.
+- `gsap.set` initial states at time 0. Reset block if the timeline loops.
+- Stagger 0.05–0.08s for related items. Breathing room 0.8–1.5s after major beats.
+- Reduced motion: skip timeline, show static rest, keep controls from crashing.

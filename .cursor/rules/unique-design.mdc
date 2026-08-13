@@ -1,0 +1,18 @@
+---
+description: Distinctive visual identity — reject AI portfolio templates
+globs: "**/*.{tsx,css}"
+alwaysApply: false
+---
+
+# Unique design
+
+Load `frontend-design` and `parallax-portfolio-craft` before generating UI.
+
+- Ground type, color, and motion in the subject's actual work and materials.
+- Custom tokens (named hex + type roles). Do not ship unthemed shadcn zinc.
+- One signature motion or layout device. Cut competing effects.
+- Type pairing is part of the brand. Avoid Inter, Space Grotesk, Syne, Clash Display as the whole identity.
+- Reject: gradient orbs, identical project cards, skill-pill clouds, "Hi I'm X" heroes, fake 01–03 indexes, glassmorphism-for-its-own-sake.
+- Copy is design material. Specific, active, no SaaS filler.
+- `text-wrap: balance` on headings. Visible `:focus-visible`. Semantic landmarks (`header`, `main`, `nav`).
+- Dark theme needs `color-scheme: dark` and matching `theme-color`.

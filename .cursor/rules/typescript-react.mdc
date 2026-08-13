@@ -1,0 +1,18 @@
+---
+description: TypeScript strictness and React 19 component conventions
+globs: "**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# TypeScript + React 19
+
+- Strict TypeScript. No `any`. Prefer `unknown` + narrowing.
+- Interfaces for object shapes; unions for variants. Avoid enums — use `as const` maps.
+- Named exports for components. Default export only for `page.tsx` / `layout.tsx` / `route.ts`.
+- Files kebab-case; components PascalCase.
+- Event handlers: `handleClick`. Booleans: `isLoading`, `hasError`.
+- `params` / `searchParams` are Promises — `await` them.
+- No `forwardRef`. `ref` is a prop.
+- Do not define components inside components.
+- Colocate types with the feature. Share only true cross-cutting types in `types/`.
+- Env: typed schema. Never expose server secrets (`NEXT_PUBLIC_` only for public values).
