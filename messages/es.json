@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Javier Baró Morales — Desarrollador frontend",
-    "description": "Desarrollador frontend en Hollywood, Florida. Entrego interfaces en producción con Angular, TypeScript, React y Next.js — sistemas de componentes, rendimiento y los detalles que el usuario siente."
+    "title": "Javier Alberto Baró Morales — Desarrollador frontend, Hollywood FL",
+    "description": "Sitio oficial de Javier Alberto Baró Morales (Javier Baró Morales), desarrollador frontend en Hollywood, Florida. Interfaces en producción con Angular, TypeScript, React y Next.js — sistemas de componentes, rendimiento y los detalles que el usuario siente."
   },
   "a11y": {
     "skip": "Saltar al contenido",
@@ -35,7 +35,7 @@
     "roleLead": "Desarrollador",
     "roleLeadRest": "frontend",
     "roles": ["Interfaces", "Sistemas de diseño", "Rendimiento"],
-    "paragraph": "Construyo el frontend de productos web — interfaces, sistemas de componentes y la capa de interacción que la gente usa. Antes hice full-stack; el trabajo que tomo ahora es Angular primero, con React y Next.js cuando el producto lo pide, y dejar la interfaz bien en producción."
+    "paragraph": "Soy Javier Alberto Baró Morales. Construyo el frontend de productos web — interfaces, sistemas de componentes y la capa de interacción que la gente usa. Antes hice full-stack; el trabajo que tomo ahora es Angular primero, con React y Next.js cuando el producto lo pide, y dejar la interfaz bien en producción."
   },
   "work": {
     "eyebrow": "FLUJO",

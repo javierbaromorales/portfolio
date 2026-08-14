@@ -26,12 +26,14 @@ export async function generateMetadata({
   }
 
   const t = await getTranslations({ locale, namespace: "meta" })
+  const pathname = getPathname({ locale, href: "/" })
   const languages = Object.fromEntries(
     routing.locales.map((code) => [
       code,
       getPathname({ locale: code, href: "/" }),
     ]),
   )
+  const ogLocale = locale === "es" ? "es_ES" : "en_US"
 
   return {
     metadataBase: new URL(siteConfig.url),
@@ -40,8 +42,12 @@ export async function generateMetadata({
       template: "%s",
     },
     description: t("description"),
+    applicationName: siteConfig.name,
+    authors: [{ name: siteConfig.legalName, url: siteConfig.url }],
+    creator: siteConfig.legalName,
+    publisher: siteConfig.legalName,
     alternates: {
-      canonical: getPathname({ locale, href: "/" }),
+      canonical: pathname,
       languages: {
         ...languages,
         "x-default": getPathname({
@@ -53,7 +59,32 @@ export async function generateMetadata({
     robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
+    openGraph: {
+      type: "profile",
+      url: pathname,
+      locale: ogLocale,
+      alternateLocale: locale === "es" ? ["en_US"] : ["es_ES"],
+      siteName: siteConfig.name,
+      title: t("title"),
+      description: t("description"),
+      firstName: "Javier",
+      lastName: "Baró Morales",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+    },
+    verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+      : undefined,
   }
 }
 
@@ -83,7 +114,12 @@ export default async function LocaleLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: serializeJsonLd(personJsonLd(t("role"))),
+            __html: serializeJsonLd(
+              personJsonLd({
+                jobTitle: t("role"),
+                description: t("meta.description"),
+              }),
+            ),
           }}
         />
         <NextIntlClientProvider>
