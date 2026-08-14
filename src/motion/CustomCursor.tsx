@@ -18,8 +18,8 @@ export function CustomCursor() {
     document.documentElement.classList.add("has-cursor")
     node.dataset.on = "true"
 
-    const xTo = gsap.quickTo(node, "x", { duration: 0.45, ease: "power2.out" })
-    const yTo = gsap.quickTo(node, "y", { duration: 0.45, ease: "power2.out" })
+    const xTo = gsap.quickTo(node, "x", { duration: 0.12, ease: "power3.out" })
+    const yTo = gsap.quickTo(node, "y", { duration: 0.12, ease: "power3.out" })
 
     const move = (event: PointerEvent) => {
       xTo(event.clientX)
@@ -70,12 +70,8 @@ export function CustomCursor() {
   return (
     <div
       ref={cursor}
-      className="pointer-events-none fixed top-0 left-0 z-50 hidden size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-accent mix-blend-difference will-change-transform group/cursor data-[mode=link]:scale-150 data-[mode=view]:size-16 data-[mode=view]:border-paper data-[on=true]:block"
+      className="pointer-events-none fixed top-0 left-0 z-50 hidden size-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white mix-blend-difference will-change-transform data-[mode=link]:size-9 data-[mode=link]:bg-transparent data-[mode=link]:shadow-[0_0_0_1px_#fff] data-[on=true]:block"
       aria-hidden
-    >
-      <span className="flex h-full items-center justify-center font-mono text-[10px] tracking-[0.2em] text-paper uppercase opacity-0 group-data-[mode=view]/cursor:opacity-100">
-        VIEW
-      </span>
-    </div>
+    />
   )
 }

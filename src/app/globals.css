@@ -2,6 +2,9 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+@custom-variant pointer-coarse (@media (pointer: coarse));
+@custom-variant pointer-fine (@media (pointer: fine));
+
 @theme inline {
   --font-heading: var(--font-satoshi);
   --font-display: var(--font-satoshi);
@@ -53,44 +56,44 @@
 }
 
 :root {
-  color-scheme: dark;
-  --ink: #0b0c0f;
-  --paper: #ede8df;
-  --mute: #8c8880;
-  --rule: #2a2c31;
-  --accent: #6ba8c4;
-  --accent-dim: color-mix(in srgb, #6ba8c4 14%, transparent);
-  --background: #0b0c0f;
-  --foreground: #ede8df;
-  --card: #121318;
-  --card-foreground: #ede8df;
-  --popover: #121318;
-  --popover-foreground: #ede8df;
-  --primary: #ede8df;
-  --primary-foreground: #0b0c0f;
-  --secondary: #16171c;
-  --secondary-foreground: #ede8df;
-  --muted: #16171c;
-  --muted-foreground: #8c8880;
-  --accent-foreground: #0b0c0f;
+  color-scheme: light;
+  --ink: #000000;
+  --paper: #ffffff;
+  --mute: #6b6b6b;
+  --rule: #d9d9d9;
+  --accent: #111111;
+  --accent-dim: color-mix(in srgb, #111111 8%, transparent);
+  --background: #f5f4f2;
+  --foreground: #111111;
+  --card: #f5f4f2;
+  --card-foreground: #111111;
+  --popover: #f5f4f2;
+  --popover-foreground: #111111;
+  --primary: #111111;
+  --primary-foreground: #f5f4f2;
+  --secondary: #ecebe8;
+  --secondary-foreground: #111111;
+  --muted: #ecebe8;
+  --muted-foreground: #6b6b6b;
+  --accent-foreground: #f5f4f2;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: #2a2c31;
-  --input: #2a2c31;
-  --ring: #6ba8c4;
-  --chart-1: #6ba8c4;
-  --chart-2: #8c8880;
-  --chart-3: #2a2c31;
-  --chart-4: #ede8df;
-  --chart-5: #0b0c0f;
+  --border: #d9d9d9;
+  --input: #d9d9d9;
+  --ring: #111111;
+  --chart-1: #111111;
+  --chart-2: #6b6b6b;
+  --chart-3: #d9d9d9;
+  --chart-4: #f5f4f2;
+  --chart-5: #111111;
   --radius: 4px;
-  --sidebar: #121318;
-  --sidebar-foreground: #ede8df;
-  --sidebar-primary: #6ba8c4;
-  --sidebar-primary-foreground: #0b0c0f;
-  --sidebar-accent: #16171c;
-  --sidebar-accent-foreground: #ede8df;
-  --sidebar-border: #2a2c31;
-  --sidebar-ring: #6ba8c4;
+  --sidebar: #ecebe8;
+  --sidebar-foreground: #111111;
+  --sidebar-primary: #111111;
+  --sidebar-primary-foreground: #f5f4f2;
+  --sidebar-accent: #ecebe8;
+  --sidebar-accent-foreground: #111111;
+  --sidebar-border: #d9d9d9;
+  --sidebar-ring: #111111;
 }
 
 @layer base {
@@ -99,15 +102,22 @@
   }
 
   html {
-    background: var(--ink);
-    color-scheme: dark;
+    background: #ffffff;
+    color-scheme: light;
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
-    background: var(--ink);
-    color: var(--paper);
-    font-family: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+    background: #ffffff;
+    color: #000000;
+    font-family: var(--font-rubik), ui-sans-serif, system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 
   h1,
@@ -135,7 +145,8 @@
 @utility site-shell {
   width: min(1440px, 100%);
   margin-inline: auto;
-  padding-inline: clamp(1rem, 4vw, 4.5rem);
+  padding-left: max(clamp(1rem, 4vw, 4.5rem), env(safe-area-inset-left));
+  padding-right: max(clamp(1rem, 4vw, 4.5rem), env(safe-area-inset-right));
 }
 
 @utility site-grid {
@@ -161,8 +172,8 @@
   left: 1rem;
   top: -4rem;
   z-index: 60;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
   padding: 0.5rem 0.75rem;
   font-family: var(--font-geist-mono), ui-monospace, monospace;
   font-size: 0.75rem;
@@ -170,7 +181,7 @@
   text-transform: uppercase;
 
   &:focus {
-    top: 1rem;
+    top: max(1rem, env(safe-area-inset-top));
   }
 }
 
@@ -184,6 +195,11 @@
   .site-grid {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
+}
+
+.hero-line {
+  display: block;
+  overflow: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {

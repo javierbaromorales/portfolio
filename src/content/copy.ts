@@ -1,57 +1,65 @@
 export const copy = {
   hero: {
-    kicker: "Software Engineer",
-    headline: ["I BUILD SOFTWARE", "THAT HOLDS TOGETHER."],
-    supporting:
-      "Frontend-focused engineer. I keep the interface, the components, and the data in the same conversation so products stay coherent as they grow.",
-    ctaWork: "View selected work",
+    kicker: "Hollywood, FL",
+    headline: [
+      "Javier Baró Morales Frontend developer. I ship production interfaces — Angular, TypeScript, React, and the details users feel.",
+    ],
+    supporting: `9 Years      I     Frontend      I      Hollywood, FL`,
+    ctaWork: "Selected work",
     ctaAbout: "About",
+    scroll: "SCROLL  DOWN",
   },
   intro: {
-    statement: "Software is a stack of decisions. I make them line up.",
+    statement: "The interface is the product.",
+    leftEyebrow: "FOCUS",
+    rightEyebrow: "ABOUT",
+    roles: [
+      "Frontend developer",
+      "Interfaces",
+      "Design systems",
+      "Performance",
+    ],
     paragraphs: [
-      "I work at the front of the stack — Angular, React, Next.js — without treating the rest as someone else’s problem. Interfaces fail when the component system, the application, and the API drift apart.",
-      "The sites and products I want to ship are the ones a team can still change a year later. Clarity in the UI. Systems underneath. Performance as a default. Maintainability as the point.",
+      "I build the frontend of web products — interfaces, component systems, and the interaction layer people actually use. Earlier roles were full-stack; the work I take now is Angular first, with React and Next.js when the product requires them, and getting the UI right in production.",
     ],
   },
   work: {
-    eyebrow: "Selected work",
-    note: "Two engagements. Details stay high-level where the work is not public.",
+    eyebrow: "WORKFLOW",
+    note: "How I take on demanding frontend work — from the constraint to a production interface.",
   },
   method: {
     eyebrow: "How I build",
-    statement: "Five layers. One product. Different depths, same direction.",
+    statement: "Interface first, then the system that keeps it honest.",
   },
   experience: {
     eyebrow: "Experience",
   },
   system: {
-    eyebrow: "Technical system",
-    statement: "A map, not a logo wall. Hover a node to see what it sits next to.",
+    eyebrow: "Stack",
+    statement:
+      "Angular is the framework I know deepest. TypeScript, React, Next.js, HTML, and CSS sit with it. Accessibility and performance as part of the build, not a pass at the end.",
   },
   about: {
-    eyebrow: "About",
+    eyebrow: "Education",
     paragraphs: [
-      "I trained as a systems engineer and moved toward the interface — not away from the rest of the stack. The work I care about is holding those layers together so a product still makes sense after the first release.",
-      "Based in Hialeah, Florida. Employed; open to a small number of conversations that are a genuine fit.",
+      "Computer systems engineering, then years shipping software. The focus now is frontend.",
     ],
     education:
-      "Universidad Latina de Panamá · Ingeniería en Sistemas Informáticos · 2016–2019",
+      "Universidad Latina de Panamá · Ingeniería en Sistemas Informáticos · 2016–2019. Instituto Politécnico · Informática · 2009–2011",
   },
   contact: {
-    headline: "LET'S BUILD SOMETHING WORTH SHIPPING.",
-    supporting:
-      "If the work needs someone who can own the frontend and still speak to the system underneath, start on LinkedIn.",
+    headline: "Let’s talk about the interface.",
+    supporting: "Hollywood, Florida. Open to select frontend roles and product work.",
     cta: "LinkedIn",
   },
   footer: {
     backToTop: "Back to top",
   },
   layers: [
-    { id: "ux", label: "UX" },
-    { id: "components", label: "COMPONENTS" },
-    { id: "application", label: "APPLICATION" },
-    { id: "api", label: "API" },
-    { id: "data", label: "DATA" },
-  ],
+    { id: "interface", label: "Interface" },
+    { id: "components", label: "Components" },
+    { id: "application", label: "Application" },
+    { id: "data", label: "Data" },
+    { id: "delivery", label: "Delivery" },
+  ] as const,
 } as const

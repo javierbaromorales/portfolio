@@ -10,11 +10,13 @@ export function HashLink({
   children,
   className,
   onNavigate,
+  offset = -80,
 }: {
   href: string
   children: React.ReactNode
   className?: string
   onNavigate?: () => void
+  offset?: number
 }) {
   const pathname = usePathname()
   const lenis = useLenis()
@@ -26,7 +28,7 @@ export function HashLink({
     const target = document.querySelector(hash)
     if (target instanceof HTMLElement) {
       if (lenis) {
-        lenis.scrollTo(target, { offset: -80, duration: 1.15 })
+        lenis.scrollTo(target, { offset, duration: 0.85 })
       } else {
         target.scrollIntoView()
       }

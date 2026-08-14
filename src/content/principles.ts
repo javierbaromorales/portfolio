@@ -3,22 +3,22 @@ import type { Principle } from "@/content/types"
 export const principles: Principle[] = [
   {
     index: "01",
-    title: "Clarity",
-    body: "If the next action is not obvious, the interface is not finished. Type, hierarchy, and empty space do the explaining before decoration does.",
+    title: "Interface first",
+    body: "Start from what the person sees and does. Layout, type, and state before the rest of the stack.",
   },
   {
     index: "02",
-    title: "Systems",
-    body: "Components are a language. They only work if they map to the product’s objects — not to a one-off layout for each screen.",
+    title: "Components as the contract",
+    body: "Reuse is a system, not a folder of similar files. Tokens, variants, and clear ownership.",
   },
   {
     index: "03",
-    title: "Performance",
-    body: "What the user waits on is part of the design. Load less, animate transform and opacity, keep the main thread for the work that needs it.",
+    title: "Ship it honest",
+    body: "Accessible, fast enough, and typed. Performance and a11y are part of the build, not a later pass.",
   },
   {
     index: "04",
-    title: "Maintainability",
-    body: "A ship that cannot be changed is unfinished. Structure the stack so a later engineer can find the decision and reverse it.",
+    title: "Leave it readable",
+    body: "The next engineer should see the intent. Structure over cleverness.",
   },
 ]

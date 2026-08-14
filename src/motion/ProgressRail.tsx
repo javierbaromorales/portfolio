@@ -3,6 +3,10 @@
 import { useRef } from "react"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(useGSAP, ScrollTrigger)
+
 export function ProgressRail() {
   const fill = useRef<HTMLDivElement>(null)
 
@@ -25,12 +29,12 @@ export function ProgressRail() {
 
   return (
     <div
-      className="pointer-events-none fixed top-0 right-0 z-40 hidden h-svh w-px bg-rule md:block"
+      className="pointer-events-none fixed top-0 right-3 z-40 hidden h-svh w-px bg-black/15 md:block"
       aria-hidden
     >
       <div
         ref={fill}
-        className="h-full origin-top bg-accent"
+        className="h-full origin-top bg-black"
         style={{ transform: "scaleY(0)" }}
       />
     </div>

@@ -17,7 +17,7 @@ export function SectionHeading({
         </p>
       ) : null}
       {children ? (
-        <h2 className="font-display text-[clamp(1.75rem,4vw,3.25rem)] leading-[1.05] font-medium tracking-[-0.03em] text-paper">
+        <h2 className="font-display text-[clamp(1.75rem,4vw,3.25rem)] leading-[1.05] font-medium tracking-[-0.03em] text-ink">
           {children}
         </h2>
       ) : null}

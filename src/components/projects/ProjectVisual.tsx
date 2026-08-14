@@ -12,30 +12,29 @@ export function ProjectVisual({
   return (
     <div
       className={cn(
-        "relative aspect-[16/10] overflow-hidden border border-rule bg-ink",
+        "relative aspect-[16/10] overflow-hidden border border-ink bg-paper",
         className,
       )}
     >
-      <div className="draw-grid absolute inset-0 opacity-70" />
       {isWorkflow ? (
-        <svg viewBox="0 0 640 400" className="absolute inset-0 size-full" aria-hidden>
-          <rect x="48" y="56" width="220" height="280" fill="none" stroke="#6BA8C4" strokeWidth="1" />
-          <rect x="200" y="88" width="220" height="240" fill="rgba(107,168,196,0.08)" stroke="#6BA8C4" strokeWidth="1" />
-          <rect x="352" y="128" width="220" height="200" fill="none" stroke="#2A2C31" strokeWidth="1" />
-          <line x1="48" y1="96" x2="268" y2="96" stroke="#6BA8C4" strokeWidth="1" />
-          <line x1="200" y1="128" x2="420" y2="128" stroke="#6BA8C4" strokeWidth="1" />
-          <line x1="352" y1="168" x2="572" y2="168" stroke="#2A2C31" strokeWidth="1" />
-          <circle cx="68" cy="76" r="3" fill="#6BA8C4" />
-          <circle cx="220" cy="108" r="3" fill="#6BA8C4" />
+        <svg viewBox="0 0 640 400" className="absolute inset-0 size-full text-ink" aria-hidden>
+          <rect x="36" y="48" width="280" height="300" fill="none" stroke="currentColor" strokeWidth="1" />
+          <rect x="180" y="88" width="260" height="252" fill="var(--paper)" stroke="currentColor" strokeWidth="1" />
+          <rect x="340" y="140" width="260" height="200" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.4" />
+          <line x1="36" y1="88" x2="316" y2="88" stroke="currentColor" strokeWidth="1" />
+          <line x1="180" y1="128" x2="440" y2="128" stroke="currentColor" strokeWidth="1" />
+          <line x1="340" y1="180" x2="600" y2="180" stroke="currentColor" strokeWidth="1" opacity="0.4" />
+          <rect x="52" y="112" width="96" height="7" fill="currentColor" opacity="0.16" />
+          <rect x="52" y="132" width="148" height="7" fill="currentColor" opacity="0.1" />
+          <rect x="196" y="156" width="128" height="7" fill="currentColor" opacity="0.16" />
         </svg>
       ) : (
-        <svg viewBox="0 0 640 400" className="absolute inset-0 size-full" aria-hidden>
-          <rect x="80" y="70" width="480" height="260" fill="none" stroke="#2A2C31" strokeWidth="1" />
-          <rect x="120" y="110" width="160" height="180" fill="rgba(107,168,196,0.1)" stroke="#6BA8C4" strokeWidth="1" />
-          <rect x="300" y="110" width="220" height="80" fill="none" stroke="#6BA8C4" strokeWidth="1" />
-          <rect x="300" y="210" width="220" height="80" fill="none" stroke="#8C8880" strokeWidth="1" />
-          <path d="M280 200 H300" stroke="#6BA8C4" strokeWidth="1" />
-          <path d="M280 250 H300" stroke="#8C8880" strokeWidth="1" />
+        <svg viewBox="0 0 640 400" className="absolute inset-0 size-full text-ink" aria-hidden>
+          <rect x="48" y="56" width="360" height="220" fill="none" stroke="currentColor" strokeWidth="1" />
+          <rect x="220" y="120" width="360" height="220" fill="var(--paper)" stroke="currentColor" strokeWidth="1" />
+          <rect x="160" y="88" width="200" height="140" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.4" />
+          <rect x="248" y="148" width="140" height="72" fill="none" stroke="currentColor" strokeWidth="1" />
+          <rect x="408" y="148" width="140" height="72" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.45" />
         </svg>
       )}
       <p className="absolute right-4 bottom-4 font-mono text-[10px] tracking-[0.2em] text-mute uppercase">

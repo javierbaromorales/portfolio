@@ -45,7 +45,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     <ReactLenis
       root
       ref={lenisRef}
-      options={{ autoRaf: false, lerp: 0.1, syncTouch: true }}
+      options={{ autoRaf: false, lerp: 0.22, wheelMultiplier: 1.05, syncTouch: true }}
     >
       <LenisGsapBridge />
       {children}

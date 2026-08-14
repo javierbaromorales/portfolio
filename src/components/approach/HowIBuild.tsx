@@ -65,11 +65,11 @@ export function HowIBuild() {
           <ol className="mt-12 flex flex-col gap-8">
             {principles.map((principle) => (
               <li key={principle.index} className="grid grid-cols-[auto_1fr] gap-4">
-                <span className="font-mono text-[11px] tracking-[0.18em] text-accent">
+                <span className="font-mono text-[11px] tracking-[0.18em] text-ink">
                   {principle.index}
                 </span>
                 <div>
-                  <h3 className="font-display text-xl tracking-[-0.02em] text-paper">
+                  <h3 className="font-display text-xl tracking-[-0.02em] text-ink">
                     {principle.title}
                   </h3>
                   <p className="mt-2 max-w-sm text-sm leading-relaxed text-mute">
@@ -85,7 +85,7 @@ export function HowIBuild() {
           {copy.layers.map((layer, index) => (
             <div
               key={layer.id}
-              className="sys-layer absolute inset-x-0 border border-accent/35 bg-ink/80"
+              className="sys-layer absolute inset-x-0 border border-ink bg-paper"
               style={{
                 top: `${12 + index * 14}%`,
                 height: "22%",
@@ -94,7 +94,7 @@ export function HowIBuild() {
               }}
             >
               <div className="flex h-full items-center justify-between px-4">
-                <span className="font-mono text-[11px] tracking-[0.28em] text-accent uppercase">
+                <span className="font-mono text-[11px] tracking-[0.28em] text-ink uppercase">
                   {layer.label}
                 </span>
                 <span className="hidden font-mono text-[10px] tracking-[0.16em] text-mute sm:inline">

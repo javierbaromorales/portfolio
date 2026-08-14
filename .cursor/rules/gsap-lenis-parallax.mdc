@@ -15,7 +15,7 @@ When editing animation, scroll, parallax, pin, or Lenis files, follow `nextjs-gs
 - Parallax/scrub: `ease: 'none'`. Horizontal pin child uses `ease: 'none'`.
 - `ScrollTrigger` on the timeline, not on nested child tweens.
 - After images/fonts/route: `ScrollTrigger.refresh()`.
-- `gsap.matchMedia()` for breakpoints and `prefers-reduced-motion`.
+- `gsap.matchMedia()` for breakpoints and `prefers-reduced-motion`. Below `md`: no pins/WebGL, weaker parallax.
 - Animate `x`/`y`/`scale`/`rotation`/`autoAlpha` only — never `top`/`left`/`width` on scroll.
 - No `overflow: hidden` on `body`.
 - `markers: true` never ships.

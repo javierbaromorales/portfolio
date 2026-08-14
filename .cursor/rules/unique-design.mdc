@@ -15,4 +15,5 @@ Load `frontend-design` and `parallax-portfolio-craft` before generating UI.
 - Reject: gradient orbs, identical project cards, skill-pill clouds, "Hi I'm X" heroes, fake 01–03 indexes, glassmorphism-for-its-own-sake.
 - Copy is design material. Specific, active, no SaaS filler.
 - `text-wrap: balance` on headings. Visible `:focus-visible`. Semantic landmarks (`header`, `main`, `nav`).
+- Mobile-first reflow. Do not `transform: scale` a 1440 artboard as the responsive strategy.
 - Dark theme needs `color-scheme: dark` and matching `theme-color`.

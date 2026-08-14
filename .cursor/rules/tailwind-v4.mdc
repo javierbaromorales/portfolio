@@ -1,0 +1,32 @@
+---
+description: Tailwind CSS v4 CSS-first tokens and utilities for this portfolio
+globs: "**/*.{css,tsx}"
+alwaysApply: false
+---
+
+# Tailwind v4
+
+CSS-first. Tokens live in `src/app/globals.css` via `@theme inline`. No `tailwind.config.js`. No `@tailwind base/components/utilities`.
+
+```css
+@import "tailwindcss";
+
+@theme inline {
+  --color-ink: var(--ink);
+  --font-sans: var(--font-geist);
+}
+```
+
+- Custom utilities: `@utility`. Custom variants: `@custom-variant`.
+- Container queries are built-in: `@container`, `@sm:`, `@md:`, `@max-md:`.
+- CSS variables in classes: `bg-(--ink)` not `bg-[--ink]`. Opacity: `bg-ink/80` not `bg-opacity-*`.
+- Brand color is the custom `ink` / `paper` / `mute` / `rule` set — not unthemed zinc/slate.
+- `site-shell` and `site-grid` already exist. Reuse them before inventing a new container.
+
+```tsx
+<div className="grid grid-cols-1 gap-6 md:grid-cols-8 lg:grid-cols-12">
+  <article className="@container min-w-0 md:col-span-6">
+    <div className="flex flex-col @md:flex-row" />
+  </article>
+</div>
+```

@@ -22,6 +22,7 @@ Read `node_modules/next/dist/docs/` before writing Next.js APIs. Do not invent P
 
 - Server Components by default. `'use client'` on leaves only.
 - Distinct visual thesis before coding UI. Load `frontend-design` and `parallax-portfolio-craft`.
+- Layouts are mobile-first (`responsive-layout`). Do not scale a desktop artboard as the mobile strategy.
 - Scroll motion uses `nextjs-gsap-lenis`. Do not mix Lenis RAF with a second GSAP ticker.
 - Honour `prefers-reduced-motion`. Animate transform/opacity only.
 - No Inter/Space Grotesk/Syne as the whole brand. No acid-green-on-black default. No 01/02/03 fake indexes.

@@ -86,10 +86,10 @@ function ProjectPanel({ project, index }: { project: Project; index: number }) {
           </ViewTransition>
         </div>
         <div className="flex flex-col gap-4 lg:col-span-5">
-          <p className="project-meta font-mono text-[11px] tracking-[0.2em] text-accent uppercase">
+          <p className="project-meta font-mono text-[11px] tracking-[0.2em] text-ink uppercase">
             {project.kicker}
           </p>
-          <h3 className="project-title font-display text-[clamp(1.8rem,3.4vw,2.8rem)] leading-[1.05] font-medium tracking-[-0.03em] text-paper">
+          <h3 className="project-title font-display text-[clamp(1.8rem,3.4vw,2.8rem)] leading-[1.05] font-medium tracking-[-0.03em] text-ink">
             {project.title}
           </h3>
           <p className="max-w-md text-[0.95rem] leading-relaxed text-mute">

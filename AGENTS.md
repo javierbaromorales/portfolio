@@ -39,7 +39,7 @@ Do not add Framer Motion for scroll. Do not add Three.js as wallpaper.
 - **Skills:** `.cursor/skills/*/SKILL.md` — match by description
 - **Sources:** `.cursor/skills/SOURCES.md`
 
-Load `frontend-design` + `parallax-portfolio-craft` before any UI. Load `nextjs-gsap-lenis` before any scroll animation. Read Next bundled docs before any Next API.
+Load `frontend-design` + `parallax-portfolio-craft` before any UI. Load `responsive-layout` / `responsive-testing` for breakpoints. Load `nextjs-gsap-lenis` before any scroll animation. Read Next bundled docs before any Next API.
 
 ## Layout
 

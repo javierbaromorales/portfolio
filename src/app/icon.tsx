@@ -10,20 +10,16 @@ export default function Icon() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#0B0C0F",
+          background: "#FFFFFF",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          border: "1px solid #6BA8C4",
+          border: "1px solid #000000",
+          fontSize: 10,
+          color: "#000000",
         }}
       >
-        <div
-          style={{
-            width: 18,
-            height: 10,
-            border: "1px solid #6BA8C4",
-          }}
-        />
+        JBM
       </div>
     ),
     { ...size },

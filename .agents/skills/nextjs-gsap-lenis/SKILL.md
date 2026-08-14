@@ -124,6 +124,27 @@ export function ParallaxLayer({ speed = 0.3, children }: { speed?: number; child
 - Nested triggers use `containerAnimation: scrollTween`.
 - `pinSpacing: false` only when the next scene is meant to overlay.
 
+## Responsive motion
+
+Use `gsap.matchMedia()` — never a JS resize listener — for breakpoints and `prefers-reduced-motion`.
+
+```javascript
+mm.add(
+  {
+    desktop: '(min-width: 768px)',
+    motion: '(prefers-reduced-motion: no-preference)',
+  },
+  (ctx) => {
+    if (!ctx.conditions?.motion) return
+    const travel = ctx.conditions.desktop ? -22 : -8
+    gsap.to(layer, { yPercent: travel, ease: 'none', scrollTrigger: { scrub: true } })
+  },
+)
+```
+
+- Below `md`: no pin stacks, no WebGL, weaker parallax. Touch already uses Lenis `syncTouch: true`.
+- Custom cursor and magnetic hover: `(pointer: fine) and (hover: hover)` only.
+
 ## Performance
 
 - Animate `x`, `y`, `scale`, `rotation`, `autoAlpha` only.

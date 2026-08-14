@@ -33,12 +33,12 @@ export function ArchitectureDiagram({
             force3D: true,
           })
           const rotateX = gsap.quickTo(el, "rotationX", {
-            duration: 0.65,
-            ease: "power2.out",
+            duration: 0.18,
+            ease: "power3.out",
           })
           const rotateY = gsap.quickTo(el, "rotationY", {
-            duration: 0.65,
-            ease: "power2.out",
+            duration: 0.18,
+            ease: "power3.out",
           })
           const move = contextSafe((event: Event) => {
             const pointer = event as PointerEvent
@@ -66,28 +66,28 @@ export function ArchitectureDiagram({
   )
 
   return (
-    <div className={cn(className)} style={{ perspective: "900px" }}>
+    <div className={cn("h-full", className)} style={{ perspective: "900px" }}>
       <div
         ref={root}
-        className="relative h-full min-h-[22rem] will-change-transform"
+        className="relative h-full min-h-[14rem] will-change-transform"
         style={{ transformStyle: "preserve-3d" }}
       >
         {copy.layers.map((layer, index) => (
           <div
             key={layer.id}
-            className="absolute inset-x-0 border border-accent/40 bg-accent-dim"
+            className="absolute inset-x-0 border border-ink bg-paper"
             style={{
-              top: `${index * 18}%`,
+              top: `${index * 16}%`,
               height: "28%",
               transform: `translate3d(${index * 6}px, ${index * 4}px, ${index * -18}px)`,
             }}
           >
             <div className="flex h-full items-end px-3 py-2">
-              <span className="font-mono text-[10px] tracking-[0.24em] text-accent uppercase">
+              <span className="font-mono text-[10px] tracking-[0.24em] text-ink uppercase">
                 {layer.label}
               </span>
             </div>
-            <span className="absolute top-2 right-3 size-1 bg-accent" />
+            <span className="absolute top-2 right-3 size-1 bg-ink" />
           </div>
         ))}
       </div>

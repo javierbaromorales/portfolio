@@ -13,7 +13,7 @@ export function AboutBlock() {
               {copy.about.paragraphs.map((paragraph) => (
                 <p
                   key={paragraph}
-                  className="max-w-2xl text-[1.05rem] leading-[1.7] text-paper/90"
+                  className="max-w-2xl text-[1.05rem] leading-[1.7] text-ink"
                 >
                   {paragraph}
                 </p>
