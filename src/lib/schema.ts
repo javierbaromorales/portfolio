@@ -1,12 +1,12 @@
 import { siteConfig } from "@/config/site"
 
-export function personJsonLd() {
+export function personJsonLd(jobTitle: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
     url: siteConfig.url,
     name: siteConfig.name,
-    jobTitle: siteConfig.role,
+    jobTitle,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Hollywood",

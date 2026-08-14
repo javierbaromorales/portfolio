@@ -1,11 +1,12 @@
 'use client'
 
 import { useLenis } from "lenis/react"
+import { useTranslations } from "next-intl"
 import { siteConfig } from "@/config/site"
-import { copy } from "@/content/copy"
 
 export function SiteFooter() {
   const lenis = useLenis()
+  const t = useTranslations()
 
   return (
     <footer className="bg-ink pb-[env(safe-area-inset-bottom)] text-paper">
@@ -16,7 +17,7 @@ export function SiteFooter() {
               {siteConfig.name}
             </p>
             <p className="mt-2 font-mono text-[11px] tracking-[0.16em] text-paper/55 uppercase">
-              {siteConfig.role}
+              {t("role")}
               <span className="mx-2 text-paper/25">/</span>
               {siteConfig.location}
             </p>
@@ -52,7 +53,7 @@ export function SiteFooter() {
                 else window.scrollTo({ top: 0 })
               }}
             >
-              {copy.footer.backToTop}
+              {t("footer.backToTop")}
             </button>
           </div>
         </div>

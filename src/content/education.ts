@@ -1,9 +1,8 @@
 export type Education = {
-  id: string
+  id: "ulatina" | "ipi"
   start: string
   end: string
   school: string
-  detail: string
 }
 
 export const education: Education[] = [
@@ -12,13 +11,11 @@ export const education: Education[] = [
     start: "2016",
     end: "2019",
     school: "Universidad Latina de Panamá",
-    detail: "Ingeniería en Sistemas Informáticos",
   },
   {
     id: "ipi",
     start: "2009",
     end: "2011",
     school: "Instituto Politécnico",
-    detail: "Informática",
   },
 ]

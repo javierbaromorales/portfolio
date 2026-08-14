@@ -6,7 +6,6 @@ import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SplitText } from "gsap/SplitText"
 import { siteConfig } from "@/config/site"
-import { copy } from "@/content/copy"
 import { ArchitectureDiagram } from "@/components/hero/ArchitectureDiagram"
 import {
   DiagramFrame,
@@ -16,12 +15,14 @@ import {
 import { MagneticButton } from "@/components/ui/MagneticButton"
 import { HashLink } from "@/components/navigation/HashLink"
 import { useLenis } from "lenis/react"
+import { useTranslations } from "next-intl"
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText)
 
 export function HeroScene() {
   const root = useRef<HTMLElement>(null)
   const lenis = useLenis()
+  const t = useTranslations()
 
   useGSAP(
     () => {
@@ -94,7 +95,7 @@ export function HeroScene() {
           className="font-mono text-[10px] tracking-[0.32em] text-mute uppercase"
           style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
         >
-          {copy.hero.scroll}
+          {t("hero.scroll")}
         </span>
         <span className="h-20 w-px bg-ink" aria-hidden />
       </div>
@@ -150,7 +151,7 @@ export function HeroScene() {
           data-speed="0.05"
           className="font-mono text-[11px] tracking-[0.22em] text-mute uppercase"
         >
-          {copy.hero.kicker}
+          {t("hero.kicker")}
           <span className="mx-3 text-rule">/</span>
           {siteConfig.location}
         </p>
@@ -158,33 +159,31 @@ export function HeroScene() {
           data-speed="0.06"
           className="mt-2 font-mono text-[11px] tracking-[0.18em] text-ink uppercase"
         >
-          {siteConfig.status}
+          {t("hero.status")}
         </p>
         <h1
           data-speed="0.08"
           className="mt-8 max-w-[18ch] font-display text-[clamp(2.6rem,8vw,7.2rem)] leading-[0.88] font-medium tracking-[-0.05em] text-ink"
         >
-          {copy.hero.headline.map((line) => (
-            <span key={line} className="hero-line block overflow-hidden">
-              {line}
-            </span>
-          ))}
+          <span className="hero-line block overflow-hidden">
+            {t("hero.headline")}
+          </span>
         </h1>
         <p
           data-speed="0.1"
           className="mt-8 max-w-md text-[0.95rem] leading-relaxed text-mute md:text-base"
         >
-          {copy.hero.supporting}
+          {t("hero.supporting")}
         </p>
         <div className="mt-10 flex flex-wrap items-center gap-8">
           <MagneticButton href="#work" onClick={goWork}>
-            {copy.hero.ctaWork}
+            {t("hero.ctaWork")}
           </MagneticButton>
           <HashLink
             href="/#about"
             className="font-mono text-[11px] tracking-[0.2em] text-mute uppercase transition-colors hover:text-ink"
           >
-            {copy.hero.ctaAbout}
+            {t("hero.ctaAbout")}
           </HashLink>
         </div>
 

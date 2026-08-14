@@ -3,7 +3,8 @@
 import { useRef } from "react"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
-import { copy } from "@/content/copy"
+import { useTranslations } from "next-intl"
+import { layerIds } from "@/content/types"
 import { cn } from "@/lib/utils"
 
 gsap.registerPlugin(useGSAP)
@@ -16,6 +17,7 @@ export function ArchitectureDiagram({
   className?: string
 }) {
   const root = useRef<HTMLDivElement>(null)
+  const t = useTranslations("layers")
 
   useGSAP(
     (context, contextSafe) => {
@@ -72,9 +74,9 @@ export function ArchitectureDiagram({
         className="relative h-full min-h-[14rem] will-change-transform"
         style={{ transformStyle: "preserve-3d" }}
       >
-        {copy.layers.map((layer, index) => (
+        {layerIds.map((id, index) => (
           <div
-            key={layer.id}
+            key={id}
             className="absolute inset-x-0 border border-ink bg-paper"
             style={{
               top: `${index * 16}%`,
@@ -84,7 +86,7 @@ export function ArchitectureDiagram({
           >
             <div className="flex h-full items-end px-3 py-2">
               <span className="font-mono text-[10px] tracking-[0.24em] text-ink uppercase">
-                {layer.label}
+                {t(id)}
               </span>
             </div>
             <span className="absolute top-2 right-3 size-1 bg-ink" />

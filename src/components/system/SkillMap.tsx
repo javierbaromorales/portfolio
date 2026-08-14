@@ -1,12 +1,13 @@
 'use client'
 
 import { useMemo, useState } from "react"
+import { useTranslations } from "next-intl"
 import { skillClusters } from "@/content/skills"
-import { copy } from "@/content/copy"
 import { cn } from "@/lib/utils"
 
 export function SkillMap() {
   const [active, setActive] = useState<string | null>(null)
+  const t = useTranslations()
 
   const related = useMemo(() => {
     if (!active) return new Set<string>()
@@ -21,17 +22,17 @@ export function SkillMap() {
       <div className="site-shell py-[clamp(4.5rem,12vw,8rem)]">
         <header className="flex flex-col gap-4">
           <p className="font-mono text-[11px] tracking-[0.22em] text-paper/55 uppercase">
-            {copy.system.eyebrow}
+            {t("system.eyebrow")}
           </p>
           <h2 className="font-display text-[clamp(1.75rem,4vw,3.25rem)] leading-[1.05] font-medium tracking-[-0.03em] text-paper">
-            {copy.system.statement}
+            {t("system.statement")}
           </h2>
         </header>
         <div className="mt-14 grid gap-10 lg:grid-cols-2">
           {skillClusters.map((cluster) => (
             <div key={cluster.id} className="border-t border-paper/20 pt-5">
               <p className="font-mono text-[11px] tracking-[0.22em] text-paper/55 uppercase">
-                {cluster.label}
+                {t(`skills.${cluster.id}`)}
               </p>
               <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-3">
                 {cluster.nodes.map((node) => {
@@ -49,7 +50,7 @@ export function SkillMap() {
                           dimmed && "opacity-25",
                         )}
                       >
-                        {node.label}
+                        {node.labelKey ? t(`skills.${node.labelKey}`) : node.label}
                       </button>
                     </li>
                   )

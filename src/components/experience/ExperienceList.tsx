@@ -4,8 +4,8 @@ import { useRef } from "react"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useTranslations } from "next-intl"
 import { experience } from "@/content/experience"
-import { copy } from "@/content/copy"
 import { Reveal } from "@/motion/Reveal"
 import {
   DiagramFrame,
@@ -18,6 +18,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export function ExperienceList() {
   const root = useRef<HTMLElement>(null)
+  const t = useTranslations("experience")
 
   useGSAP(
     () => {
@@ -71,7 +72,7 @@ export function ExperienceList() {
       <div className="site-shell relative">
         <Reveal>
           <p className="text-center font-mono text-[11px] tracking-[0.22em] text-mute uppercase">
-            {copy.experience.eyebrow}
+            {t("eyebrow")}
           </p>
           <div className="relative z-10 mx-auto mt-14 max-w-xl bg-paper/80 px-4 py-2">
             <div
@@ -92,18 +93,18 @@ export function ExperienceList() {
                     <span className="mx-2 font-sans text-sm tracking-normal text-mute">
                       —
                     </span>
-                    {item.end}
+                    {item.current ? t("present") : item.end}
                   </p>
                   <p className="mt-4 font-mono text-[11px] tracking-[0.18em] text-ink uppercase">
                     {item.company}
                   </p>
                   <p className="mt-1 font-mono text-[11px] tracking-[0.16em] text-mute uppercase">
-                    {item.role}
+                    {t(`jobs.${item.id}.role`)}
                     <span className="mx-2 text-rule">|</span>
-                    {item.location}
+                    {t(`jobs.${item.id}.location`)}
                   </p>
                   <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-mute">
-                    {item.description}
+                    {t(`jobs.${item.id}.description`)}
                   </p>
                 </li>
               ))}

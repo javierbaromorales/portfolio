@@ -4,14 +4,16 @@ import { useRef } from "react"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { copy } from "@/content/copy"
+import { useTranslations } from "next-intl"
 import { principles } from "@/content/principles"
+import { layerIds } from "@/content/types"
 import { SectionHeading } from "@/components/ui/SectionHeading"
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export function HowIBuild() {
   const root = useRef<HTMLElement>(null)
+  const t = useTranslations()
 
   useGSAP(
     () => {
@@ -59,21 +61,21 @@ export function HowIBuild() {
     >
       <div className="site-shell grid min-h-svh gap-10 py-20 lg:grid-cols-12 lg:items-center">
         <div className="lg:col-span-5">
-          <SectionHeading eyebrow={copy.method.eyebrow}>
-            {copy.method.statement}
+          <SectionHeading eyebrow={t("method.eyebrow")}>
+            {t("method.statement")}
           </SectionHeading>
           <ol className="mt-12 flex flex-col gap-8">
             {principles.map((principle) => (
-              <li key={principle.index} className="grid grid-cols-[auto_1fr] gap-4">
+              <li key={principle.id} className="grid grid-cols-[auto_1fr] gap-4">
                 <span className="font-mono text-[11px] tracking-[0.18em] text-ink">
                   {principle.index}
                 </span>
                 <div>
                   <h3 className="font-display text-xl tracking-[-0.02em] text-ink">
-                    {principle.title}
+                    {t(`principles.${principle.id}.title`)}
                   </h3>
                   <p className="mt-2 max-w-sm text-sm leading-relaxed text-mute">
-                    {principle.body}
+                    {t(`principles.${principle.id}.body`)}
                   </p>
                 </div>
               </li>
@@ -82,9 +84,9 @@ export function HowIBuild() {
         </div>
 
         <div className="relative h-[28rem] lg:col-span-7">
-          {copy.layers.map((layer, index) => (
+          {layerIds.map((id, index) => (
             <div
-              key={layer.id}
+              key={id}
               className="sys-layer absolute inset-x-0 border border-ink bg-paper"
               style={{
                 top: `${12 + index * 14}%`,
@@ -95,10 +97,10 @@ export function HowIBuild() {
             >
               <div className="flex h-full items-center justify-between px-4">
                 <span className="font-mono text-[11px] tracking-[0.28em] text-ink uppercase">
-                  {layer.label}
+                  {t(`layers.${id}`)}
                 </span>
                 <span className="hidden font-mono text-[10px] tracking-[0.16em] text-mute sm:inline">
-                  DEPTH {index + 1}
+                  {t("method.depth", { n: index + 1 })}
                 </span>
               </div>
             </div>

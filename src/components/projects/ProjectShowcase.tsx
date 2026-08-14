@@ -1,13 +1,13 @@
 'use client'
 
 import { ViewTransition } from "react"
-import Link from "next/link"
+import { useRef } from "react"
+import { useTranslations } from "next-intl"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { useRef } from "react"
+import { Link } from "@/i18n/navigation"
 import type { Project } from "@/content/types"
-import { copy } from "@/content/copy"
 import { ProjectVisual } from "@/components/projects/ProjectVisual"
 import { SectionHeading } from "@/components/ui/SectionHeading"
 
@@ -115,12 +115,14 @@ export function ProjectShowcase({
   heading?: boolean
   id?: string
 }) {
+  const t = useTranslations("work")
+
   return (
     <section id={id} className={id ? "scroll-mt-24" : undefined}>
       {heading ? (
         <div className="site-shell pb-8">
-          <SectionHeading eyebrow={copy.work.eyebrow} />
-          <p className="mt-4 max-w-md text-sm text-mute">{copy.work.note}</p>
+          <SectionHeading eyebrow={t("eyebrow")} />
+          <p className="mt-4 max-w-md text-sm text-mute">{t("note")}</p>
         </div>
       ) : null}
       {projects.map((project, index) => (

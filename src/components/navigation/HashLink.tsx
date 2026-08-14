@@ -1,9 +1,18 @@
 'use client'
 
-import { usePathname } from "next/navigation"
-import Link from "next/link"
+import { usePathname, Link } from "@/i18n/navigation"
 import { useLenis } from "lenis/react"
 import { cn } from "@/lib/utils"
+
+function visibleAnchor(hash: string): HTMLElement | null {
+  const id = hash.replace("#", "")
+  const nodes = document.querySelectorAll<HTMLElement>(`[data-anchor="${id}"]`)
+  for (const node of nodes) {
+    if (node.getClientRects().length > 0) return node
+  }
+  const fallback = document.getElementById(id)
+  return fallback instanceof HTMLElement ? fallback : null
+}
 
 export function HashLink({
   href,
@@ -21,12 +30,13 @@ export function HashLink({
   const pathname = usePathname()
   const lenis = useLenis()
   const hash = href.includes("#") ? `#${href.split("#")[1]}` : href
+  const isHome = pathname === "/"
 
   const scroll = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    if (pathname !== "/") return
+    if (!isHome) return
     event.preventDefault()
-    const target = document.querySelector(hash)
-    if (target instanceof HTMLElement) {
+    const target = visibleAnchor(hash)
+    if (target) {
       if (lenis) {
         lenis.scrollTo(target, { offset, duration: 0.85 })
       } else {
@@ -36,9 +46,13 @@ export function HashLink({
     onNavigate?.()
   }
 
-  if (pathname !== "/") {
+  if (!isHome) {
     return (
-      <Link href={href} className={className} onClick={onNavigate}>
+      <Link
+        href={{ pathname: "/", hash: hash.replace("#", "") }}
+        className={className}
+        onClick={onNavigate}
+      >
         {children}
       </Link>
     )

@@ -28,33 +28,37 @@ export type Project = {
 }
 
 export type Experience = {
-  id: string
-  role: string
+  id: "freelance" | "getecsa" | "rootstack" | "crimsonlogic"
   company: string
-  location: string
   start: string
   end: string
   current?: boolean
-  description: string
   featured: boolean
   internship?: boolean
   tech?: string[]
 }
 
 export type Principle = {
+  id: "interface" | "components" | "ship" | "readable"
   index: string
-  title: string
-  body: string
 }
 
 export type SkillNode = {
   id: string
   label: string
   related: string[]
+  labelKey?: "accessibility" | "performance"
 }
 
 export type SkillCluster = {
-  id: string
-  label: string
+  id: "language" | "ui" | "markup" | "quality"
   nodes: SkillNode[]
 }
+
+export const layerIds = [
+  "interface",
+  "components",
+  "application",
+  "data",
+  "delivery",
+] as const

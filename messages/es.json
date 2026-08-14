@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "title": "Javier Baró Morales — Desarrollador frontend",
+    "description": "Desarrollador frontend en Hollywood, Florida. Entrego interfaces en producción con Angular, TypeScript, React y Next.js — sistemas de componentes, rendimiento y los detalles que el usuario siente."
+  },
+  "a11y": {
+    "skip": "Saltar al contenido",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "primaryNav": "Principal",
+    "locale": "Idioma"
+  },
+  "nav": {
+    "experience": "Experiencia",
+    "workflow": "FLUJO",
+    "contact": "CONTACTO"
+  },
+  "notFound": {
+    "back": "Volver"
+  },
+  "hero": {
+    "kicker": "Hollywood, FL",
+    "headline": "Javier Baró Morales Desarrollador frontend. Interfaces en producción — Angular, TypeScript, React.",
+    "supporting": "9 años      I     Frontend      I      Hollywood, FL",
+    "ctaWork": "Trabajo seleccionado",
+    "ctaAbout": "Sobre mí",
+    "scroll": "DESPLÁZATE",
+    "status": "Disponible para oportunidades selectas",
+    "statusCompact": "Oportunidades selectas"
+  },
+  "intro": {
+    "statement": "La interfaz es el producto.",
+    "leftEyebrow": "FOCO",
+    "rightEyebrow": "SOBRE MÍ",
+    "roleLead": "Desarrollador",
+    "roleLeadRest": "frontend",
+    "roles": ["Interfaces", "Sistemas de diseño", "Rendimiento"],
+    "paragraph": "Construyo el frontend de productos web — interfaces, sistemas de componentes y la capa de interacción que la gente usa. Antes hice full-stack; el trabajo que tomo ahora es Angular primero, con React y Next.js cuando el producto lo pide, y dejar la interfaz bien en producción."
+  },
+  "work": {
+    "eyebrow": "FLUJO",
+    "note": "Cómo asumo trabajo frontend exigente — de la restricción a una interfaz en producción."
+  },
+  "method": {
+    "eyebrow": "Cómo construyo",
+    "statement": "La interfaz primero, luego el sistema que la mantiene honesta.",
+    "depth": "PROFUNDIDAD {n}"
+  },
+  "layers": {
+    "interface": "Interfaz",
+    "components": "Componentes",
+    "application": "Aplicación",
+    "data": "Datos",
+    "delivery": "Entrega"
+  },
+  "experience": {
+    "eyebrow": "Experiencia",
+    "internship": "Prácticas",
+    "present": "Actualidad",
+    "jobs": {
+      "freelance": {
+        "role": "Desarrollador frontend",
+        "location": "Estados Unidos",
+        "description": "Interfaces de producto, sistemas de componentes y arquitectura frontend para aplicaciones web."
+      },
+      "getecsa": {
+        "role": "Desarrollador de software",
+        "location": "Panamá",
+        "description": "Entregué trabajo de aplicaciones web en todo el stack; la mayor responsabilidad en la interfaz."
+      },
+      "rootstack": {
+        "role": "Desarrollador de software",
+        "location": "Panamá",
+        "description": "Soluciones web e interfaces de aplicación para productos de clientes."
+      },
+      "crimsonlogic": {
+        "role": "Practicante de desarrollo de software",
+        "location": "Panamá",
+        "description": ""
+      }
+    }
+  },
+  "stack": {
+    "eyebrow": "Stack",
+    "statement": "Angular es el framework que más profundo conozco. TypeScript, React, Next.js, HTML y CSS van con él. Accesibilidad y rendimiento forman parte del build, no un paso al final.",
+    "language": "Lenguaje",
+    "ui": "UI",
+    "also": "También",
+    "foundation": "Base",
+    "quality": "Calidad",
+    "components": "Componentes, plantillas",
+    "layoutType": "Layout, tipografía",
+    "a11y": "A11y",
+    "performance": "Rendimiento",
+    "alongside": "Junto a esto",
+    "angularEco": "Angular",
+    "java": "Java",
+    "faces": "UI Java",
+    "cms": "CMS"
+  },
+  "system": {
+    "eyebrow": "Stack",
+    "statement": "Angular es el framework que más profundo conozco. TypeScript, React, Next.js, HTML y CSS van con él. Accesibilidad y rendimiento forman parte del build, no un paso al final."
+  },
+  "skills": {
+    "language": "Lenguaje",
+    "ui": "UI",
+    "markup": "Marcado",
+    "quality": "Calidad",
+    "accessibility": "Accesibilidad",
+    "performance": "Rendimiento"
+  },
+  "education": {
+    "eyebrow": "Formación",
+    "paragraph": "Ingeniería en sistemas, luego años entregando software. El foco ahora es frontend.",
+    "line": "Universidad Latina de Panamá · Ingeniería en Sistemas Informáticos · 2016–2019. Instituto Politécnico · Informática · 2009–2011",
+    "items": {
+      "ulatina": {
+        "detail": "Ingeniería en Sistemas Informáticos"
+      },
+      "ipi": {
+        "detail": "Informática"
+      }
+    }
+  },
+  "workflow": {
+    "eyebrow": "Flujo",
+    "note": "Cómo asumo trabajo frontend exigente — de la restricción a una interfaz en producción.",
+    "steps": {
+      "scope": {
+        "title": "Delimitar el problema",
+        "body": "El trabajo difícil empieza en la restricción: el flujo roto, los estados que faltan, la interfaz que ya falló."
+      },
+      "specify": {
+        "title": "Especificar la interfaz",
+        "body": "Primero los caminos vacío, error y éxito. El layout y la tipografía se deciden antes de nombrar un componente."
+      },
+      "build": {
+        "title": "Construir el sistema",
+        "body": "Angular es el stack principal. React y Next.js cuando el producto está hecho así. Los componentes son el contrato."
+      },
+      "ship": {
+        "title": "Entregarlo legible",
+        "body": "Accesible, performante y tipado — para que el siguiente ingeniero siga la intención."
+      }
+    }
+  },
+  "principles": {
+    "interface": {
+      "title": "La interfaz primero",
+      "body": "Empieza por lo que la persona ve y hace. Layout, tipografía y estado antes del resto del stack."
+    },
+    "components": {
+      "title": "Componentes como contrato",
+      "body": "Reutilizar es un sistema, no una carpeta de archivos parecidos. Tokens, variantes y dueño claro."
+    },
+    "ship": {
+      "title": "Entregarlo honesto",
+      "body": "Accesible, suficientemente rápido y tipado. Rendimiento y a11y forman parte del build, no un paso después."
+    },
+    "readable": {
+      "title": "Dejarlo legible",
+      "body": "El siguiente ingeniero debe ver la intención. Estructura antes que ingenio."
+    }
+  },
+  "contact": {
+    "headline": "Hablemos de la interfaz.",
+    "supporting": "Hollywood, Florida. Abierto a roles frontend y trabajo de producto selectos.",
+    "cta": "LinkedIn",
+    "linkedin": "LINKEDIN",
+    "address": "Dirección",
+    "label": "CONTACTO",
+    "open": "Abrir una conversación",
+    "city": "Hollywood, Florida",
+    "bio": "Desarrollador frontend en Hollywood. Entrego interfaces en producción — Angular, TypeScript, React — y los sistemas que las mantienen coherentes."
+  },
+  "footer": {
+    "backToTop": "Volver arriba"
+  },
+  "role": "Desarrollador frontend"
+}
