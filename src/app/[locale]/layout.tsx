@@ -77,6 +77,13 @@ export async function generateMetadata({
       firstName: "Javier",
       lastName: "Baró Morales",
     },
+    icons: {
+      icon: [
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      ],
+      apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    },
     twitter: {
       card: "summary_large_image",
       title: t("title"),

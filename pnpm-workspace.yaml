@@ -2,3 +2,4 @@ confirmModulesPurge: false
 allowBuilds:
   "@parcel/watcher": true
   "@swc/core": true
+  unrs-resolver: set this to true or false

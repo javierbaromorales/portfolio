@@ -113,7 +113,7 @@ function ExpJob({
   )
 }
 
-export function FigmaCanvas() {
+export function HomeCanvas() {
   const root = useRef<HTMLDivElement>(null)
   const locale = useLocale()
   const t = useTranslations()
@@ -340,7 +340,7 @@ export function FigmaCanvas() {
           </p>
         </div>
         <img
-          src="/figma/scroll-arrow.svg"
+          src="/images/scroll-arrow.svg"
           alt=""
           className="absolute top-[446.4px] left-[45.07px] h-[94px] w-px"
         />
@@ -374,7 +374,7 @@ export function FigmaCanvas() {
         >
           <div className="hero-tilt relative size-full overflow-hidden">
             <img
-              src="/figma/hero-portrait.png"
+              src="/images/hero-portrait.png"
               alt=""
               className="size-full object-cover"
             />
@@ -393,7 +393,7 @@ export function FigmaCanvas() {
         >
           <div className="hero-tilt relative size-full overflow-hidden">
             <img
-              src="/figma/hero-keyboard.png"
+              src="/images/hero-keyboard.png"
               alt=""
               className="size-full object-cover object-bottom"
             />
@@ -412,7 +412,7 @@ export function FigmaCanvas() {
         >
           <div className="hero-tilt relative size-full overflow-hidden">
             <img
-              src="/figma/hero-spiral.svg"
+              src="/images/hero-spiral.svg"
               alt=""
               className="absolute max-w-none"
               style={{ left: -2.792, top: -4.282, width: "100%", height: "100%" }}
@@ -474,7 +474,7 @@ export function FigmaCanvas() {
           }
         >
           <img
-            src="/figma/exp-right.png"
+            src="/images/exp-right.png"
             alt=""
             className="size-full object-cover"
           />
@@ -491,7 +491,7 @@ export function FigmaCanvas() {
         >
           <div className="-scale-y-100 rotate-180">
             <img
-              src="/figma/exp-left.png"
+              src="/images/exp-left.png"
               alt=""
               className="h-[500.293px] w-[573.341px] object-cover"
             />
@@ -634,7 +634,7 @@ export function FigmaCanvas() {
         </div>
 
         <img
-          src="/figma/logo-mark.svg"
+          src="/images/logo-mark.svg"
           alt=""
           className="absolute"
           style={{
@@ -671,7 +671,7 @@ export function FigmaCanvas() {
           }
         >
           <img
-            src="/figma/edu-right.png"
+            src="/images/edu-right.png"
             alt=""
             className="size-full object-cover"
           />
@@ -687,7 +687,7 @@ export function FigmaCanvas() {
           }}
         >
           <img
-            src="/figma/edu-left.png"
+            src="/images/edu-left.png"
             alt=""
             className="size-full object-cover object-bottom"
           />
@@ -780,7 +780,7 @@ export function FigmaCanvas() {
           }}
         >
           <img
-            src="/figma/footer-spiral.svg"
+            src="/images/footer-spiral.svg"
             alt=""
             className="absolute max-w-none"
             style={{
@@ -823,7 +823,7 @@ export function FigmaCanvas() {
           </a>
         </p>
         <img
-          src="/figma/footer-logo.svg"
+          src="/images/footer-logo.svg"
           alt=""
           className="absolute"
           style={{

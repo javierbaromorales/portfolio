@@ -10,7 +10,7 @@ export function BrandMark({
 }) {
   return (
     <img
-      src="/figma/logo-name.svg"
+      src="/images/logo-name.svg"
       alt={alt}
       width={79}
       height={26}

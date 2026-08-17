@@ -34,7 +34,7 @@ export function personJsonLd({
         jobTitle,
         description,
         url,
-        image: `${url}/figma/hero-portrait.png`,
+        image: `${url}/images/hero-portrait.png`,
         address: {
           "@type": "PostalAddress",
           addressLocality: "Hollywood",

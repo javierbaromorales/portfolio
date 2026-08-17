@@ -94,7 +94,7 @@ function StackCol({
   )
 }
 
-export function FigmaFlow() {
+export function HomeFlow() {
   const root = useRef<HTMLDivElement>(null)
   const locale = useLocale()
   const t = useTranslations()
@@ -301,7 +301,7 @@ export function FigmaFlow() {
             {t("hero.scroll")}
           </p>
           <img
-            src="/figma/scroll-arrow.svg"
+            src="/images/scroll-arrow.svg"
             alt=""
             className="mt-8 h-[94px] w-px"
           />
@@ -336,14 +336,14 @@ export function FigmaFlow() {
 
         <div className="relative mt-6 grid grid-cols-1 gap-2 px-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] md:mt-14 md:grid-cols-3 md:gap-3 md:px-[max(clamp(1rem,4vw,4.5rem),env(safe-area-inset-left))] md:pr-[max(clamp(1rem,4vw,4.5rem),env(safe-area-inset-right))]">
           <Still
-            src="/figma/hero-portrait.png"
+            src="/images/hero-portrait.png"
             alt=""
             priority
             sizes="(min-width: 768px) 33vw, 100vw"
             className="hero-still aspect-[427/340] md:col-span-1"
           />
           <Still
-            src="/figma/hero-keyboard.png"
+            src="/images/hero-keyboard.png"
             alt=""
             sizes="(min-width: 768px) 33vw, 50vw"
             imageClassName="object-bottom"
@@ -352,7 +352,7 @@ export function FigmaFlow() {
           <div className="hero-still hidden aspect-[346/421] overflow-hidden md:block">
             <div className="hero-tilt relative size-full">
               <img
-                src="/figma/hero-spiral.svg"
+                src="/images/hero-spiral.svg"
                 alt=""
                 className="size-full object-cover"
               />
@@ -394,13 +394,13 @@ export function FigmaFlow() {
         className="relative scroll-mt-[calc(5rem+env(safe-area-inset-top))] overflow-x-clip pb-8 md:pb-16"
       >
         <Still
-          src="/figma/exp-right.png"
+          src="/images/exp-right.png"
           alt=""
           sizes="(min-width: 1280px) 38vw, 100vw"
           className="pointer-events-none absolute top-24 right-0 z-0 hidden h-[27rem] w-[min(38vw,33.75rem)] xl:block"
         />
         <Still
-          src="/figma/exp-left.png"
+          src="/images/exp-left.png"
           alt=""
           sizes="(min-width: 1280px) 40vw, 100vw"
           imageClassName="-scale-y-100 rotate-180"
@@ -512,18 +512,18 @@ export function FigmaFlow() {
         className="relative scroll-mt-[calc(5rem+env(safe-area-inset-top))] overflow-x-clip py-20 md:py-28"
       >
         <img
-          src="/figma/logo-mark.svg"
+          src="/images/logo-mark.svg"
           alt=""
           className="pointer-events-none absolute top-16 left-[max(1rem,env(safe-area-inset-left))] hidden w-[min(22vw,19rem)] xl:block"
         />
         <Still
-          src="/figma/edu-right.png"
+          src="/images/edu-right.png"
           alt=""
           sizes="(min-width: 1280px) 36vw, 100vw"
           className="pointer-events-none absolute top-24 right-0 z-0 hidden h-[36rem] w-[min(36vw,32.5rem)] xl:block"
         />
         <Still
-          src="/figma/edu-left.png"
+          src="/images/edu-left.png"
           alt=""
           sizes="(min-width: 1280px) 48vw, 100vw"
           imageClassName="object-bottom"
@@ -619,7 +619,7 @@ export function FigmaFlow() {
       >
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] bg-[#f6f6f6] xl:block">
           <img
-            src="/figma/footer-spiral.svg"
+            src="/images/footer-spiral.svg"
             alt=""
             className="absolute top-[-40%] left-[-80%] h-[220%] w-[280%] max-w-none"
           />
@@ -657,7 +657,7 @@ export function FigmaFlow() {
           </div>
           <div className="min-w-0 xl:max-w-xs">
             <img
-              src="/figma/footer-logo.svg"
+              src="/images/footer-logo.svg"
               alt=""
               className="h-[76px] w-[153px]"
             />
